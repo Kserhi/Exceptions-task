@@ -4,18 +4,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        getPriceOfDay(getData(),getDayFromUser());
+        getPriceOfDay(getData(), getDayFromUser());
     }
 
     public static int getDayFromUser() {
         System.out.println("Ведіть номер дня (1-5) для якого цікавить ціна:");
         String inputText = new Scanner(System.in).next();
-        try {
-            return Integer.parseInt(inputText);
-        } catch (NumberFormatException e) {
-            System.out.println("Ведено неправильний формат числа " + e);
-        }
-        return -1;
+        return Integer.parseInt(inputText);
+
     }
 
     public static void getPriceOfDay(double[] productPrice, int namberOfDay) {
